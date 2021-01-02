@@ -4,14 +4,14 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class BookRequestModel implements Serializable {
+public class BookSaveRequestModel implements Serializable {
 
     private static final long serialVersionUID = 1264112134925232211L;
 
     private String name;
     private Date publicationDate;
     private String description;
-    private List<Integer> authorsIds;
+    private List<Integer> authorIds;
 
     public String getName() {
         return name;
@@ -37,11 +37,11 @@ public class BookRequestModel implements Serializable {
         this.description = description;
     }
 
-    public List<Integer> getAuthorsIds() {
-        return authorsIds;
+    public List<Integer> getAuthorIds() {
+        return authorIds;
     }
 
-    public void setAuthorsIds(List<Integer> authorsIds) {
-        this.authorsIds = authorsIds;
+    public void setAuthorIds(List<Integer> authorIds) {
+        this.authorIds = authorIds;
     }
 }

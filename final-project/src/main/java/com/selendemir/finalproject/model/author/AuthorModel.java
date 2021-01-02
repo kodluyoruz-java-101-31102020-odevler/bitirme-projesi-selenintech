@@ -1,8 +1,8 @@
-package com.selendemir.finalproject.model;
+package com.selendemir.finalproject.model.author;
 
 import java.io.Serializable;
 
-public class Author implements Serializable {
+public class AuthorModel implements Serializable {
 
 
     private static final long serialVersionUID = 2856920642472022137L;
