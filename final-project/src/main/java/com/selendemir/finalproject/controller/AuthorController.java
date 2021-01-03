@@ -7,6 +7,7 @@ import com.selendemir.finalproject.service.contract.IAuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/authors")
 public class AuthorController {

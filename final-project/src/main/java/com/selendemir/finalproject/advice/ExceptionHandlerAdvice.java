@@ -1,4 +1,4 @@
-package com.selendemir.finalproject.advise;
+package com.selendemir.finalproject.advice;
 
 import com.selendemir.finalproject.exception.EntityNotFoundException;
 import com.selendemir.finalproject.model.exception.ExceptionMessageModel;

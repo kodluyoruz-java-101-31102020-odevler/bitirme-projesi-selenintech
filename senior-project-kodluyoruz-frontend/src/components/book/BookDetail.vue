@@ -20,7 +20,7 @@
           <div class="col">
             <span><h5>Authors</h5></span>
             <div v-for="author in bookDetail.authors" :key="author.id">
-              {{ author.name }}
+              <router-link :to="{name:'authorDetail',params:{authorId: author.id}}">{{ author.name }}</router-link>
             </div>
           </div>
         </div>
@@ -31,26 +31,7 @@
 
 <script>
 export default {
-  data() {
-    return {
-      bookDetail: {
-        id: 5,
-        name: "adfg",
-        publicationDate: "1977-02-12T00:00:00.000+00:00",
-        description: "yüzer",
-        authors: [
-          {
-            id: 2,
-            name: "ayşe",
-          },
-          {
-            id: 3,
-            name: "ali",
-          },
-        ],
-      },
-    };
-  },
+ props:["bookDetail"]
 };
 </script>
 <style scoped>

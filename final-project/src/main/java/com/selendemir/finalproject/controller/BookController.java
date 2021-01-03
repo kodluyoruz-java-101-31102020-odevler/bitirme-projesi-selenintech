@@ -7,6 +7,7 @@ import com.selendemir.finalproject.service.contract.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/books")
 public class BookController{
