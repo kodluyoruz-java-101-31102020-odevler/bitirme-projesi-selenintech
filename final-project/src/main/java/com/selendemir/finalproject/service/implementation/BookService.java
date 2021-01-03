@@ -16,10 +16,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-class BookService implements IBookService {
+@Transactional
+public class BookService implements IBookService {
 
     @Autowired
     private BookRepository bookRepository;
@@ -43,6 +45,10 @@ class BookService implements IBookService {
     @RunningTime
     @Override
     public BookListResponse search(String name) {
+
+        if (name == null || name.length() == 0)
+            return getAll();
+
         List<Book> entities = bookRepository.search(name);
         BookListResponse bookListResponse = new BookListResponse();
         List<BookListModel> bookListModels = BookMapper.mapToBookListModels(entities);
